@@ -1,0 +1,36 @@
+{
+  "name": "electron-sveltekit",
+  "description": "Electron, SvelteKit, Bootstrap 5 and FontAwesome",
+  "author": "anonymous",
+  "version": "1.0.0",
+  "main": "src/electron.cjs",
+  "private": true,
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "start": "svelte-kit start",
+    "electron": "concurrently --kill-others 'svelte-kit dev' 'electron src/electron.cjs'",
+    "build": "svelte-kit build",
+    "dev:package": "npm run build && electron-builder --config electron-builder.config.json --dir",
+    "package": "npm run build && electron-builder --config electron-builder.config.json"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "next",
+    "@sveltejs/adapter-static": "^1.0.0-next.0",
+    "@sveltejs/kit": "next",
+    "concurrently": "^6.0.0",
+    "electron": "^12.0.2",
+    "electron-builder": "^22.10.5",
+    "electron-reloader": "^1.2.0",
+    "sass": "^1.0.0",
+    "svelte": "^3.29.0",
+    "svelte-preprocess": "^4.0.0",
+    "vite": "^2.1.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "bootstrap": "^5.0.0-beta3",
+    "electron-serve": "^1.1.0",
+    "electron-window-state": "^5.0.3"
+  }
+}
