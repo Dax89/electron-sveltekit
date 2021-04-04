@@ -1,7 +1,7 @@
 # Electron & SvelteKit
 
 <div style="text-align: center">
-  <img src="https://github.com/Dax89/electron-sveltekit/blob/master/icon.png" width="256">
+  <img src="https://github.com/Dax89/electron-sveltekit/blob/master/icon.png" width="128">
 </div>
 <br>
 A minimal project template for Electron and SvelteKit configured with <a href="https://www.npmjs.com/package/@sveltejs/adapter-static">adapter-static</a>.
