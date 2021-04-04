@@ -2,6 +2,10 @@
   import Counter from "$lib/Counter.svelte";
 </script>
 
+<svelte:head>
+  <title>Svelte Template</title>
+</svelte:head>
+
 <main>
   <h1 class="text-primary">Hello world!</h1>
   <Counter />

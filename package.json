@@ -28,8 +28,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
-    "bootstrap": "^5.0.0-beta3",
     "electron-serve": "^1.1.0",
     "electron-window-state": "^5.0.3"
   }
