@@ -30,7 +30,7 @@ Download the template and install the dependencies:
 
 ```
 npx degit Dax89/electron-sveltekit
-npm install --save boostrap@next @fortawesome/fontawesome-free
+npm install --save bootstrap@next @fortawesome/fontawesome-free
 ```
 
 Add these lines in `src/app.scss`:
