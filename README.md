@@ -1,10 +1,10 @@
-# Electron & SvelteKit
-
-<div style="text-align: center">
-  <img src="https://github.com/Dax89/electron-sveltekit/blob/master/icon.png" width="128">
-</div>
+<p align="center">
+  <img src="https://github.com/Dax89/electron-sveltekit/blob/master/icon.png" width="256">
+</p>
+<p align="center">
+  A minimal project template for Electron and SvelteKit configured with <a href="https://www.npmjs.com/package/@sveltejs/adapter-static">adapter-static</a>.
+</p>
 <br>
-A minimal project template for Electron and SvelteKit configured with <a href="https://www.npmjs.com/package/@sveltejs/adapter-static">adapter-static</a>.
 
 ## Screenshot 
 ![Screenshot](https://github.com/Dax89/electron-sveltekit/blob/master/screenshot.png)
