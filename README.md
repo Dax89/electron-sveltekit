@@ -1,3 +1,5 @@
+## SvelteKit + Electron
+
 <p align="center">
   <img src="https://github.com/Dax89/electron-sveltekit/blob/master/icon.png" width="256">
 </p>
