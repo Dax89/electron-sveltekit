@@ -1,7 +1,6 @@
 # Electron & SvelteKit
 
-A minimal project template for Electron and SvelteKit.<br>
-Currently the template is configured with ![adapter-static](https://www.npmjs.com/package/@sveltejs/adapter-static).
+A minimal project template for Electron and SvelteKit configured with ![adapter-static](https://www.npmjs.com/package/@sveltejs/adapter-static).
 
 ![Screenshot](https://github.com/Dax89/electron-sveltekit/blob/master/screenshot.png)
 
