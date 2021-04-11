@@ -29,6 +29,7 @@ function createMainWindow() {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
+      devTools: isdev
     }
   });
 
