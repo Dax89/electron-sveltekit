@@ -24,11 +24,15 @@ function createMainWindow() {
     x: mws.x,
     y: mws.y,
     width: mws.width,
-    height: mws.height
+    height: mws.height,
+
+    webPreferences: {
+      devTools: isdev
+    }
   });
 
   mainwindow.once("close", () => { mainwindow = null; });
-  mainwindow.removeMenu();
+  if(!isdev) mainwindow.removeMenu();
   mws.manage(mainwindow);
 
   if(isdev) loadVite(port);
