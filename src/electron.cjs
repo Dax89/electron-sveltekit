@@ -1,11 +1,11 @@
-const {app, BrowserWindow} = require("electron");
+const {app, ipcMain, BrowserWindow} = require("electron");
 const serve = require("electron-serve");
 const ws = require("electron-window-state");
 try { require("electron-reloader")(module); } catch {}
 
 const loadURL = serve({directory: "."});
 const port = process.env.PORT || 3000;
-const isdev = !app.isPackaged;
+const isdev = !app.isPackaged || (process.env.NODE_ENV == "development");
 let mainwindow;
 
 function loadVite(port) {
@@ -27,12 +27,16 @@ function createMainWindow() {
     height: mws.height,
 
     webPreferences: {
-      devTools: isdev
+      nodeIntegration: true,
+      contextIsolation: false,
     }
   });
 
   mainwindow.once("close", () => { mainwindow = null; });
+
   if(!isdev) mainwindow.removeMenu();
+  else mainwindow.webContents.openDevTools();
+
   mws.manage(mainwindow);
 
   if(isdev) loadVite(port);
