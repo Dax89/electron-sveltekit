@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "svelte-kit dev",
     "start": "svelte-kit start",
-    "electron": "concurrently --kill-others 'svelte-kit dev' 'electron src/electron.cjs'",
+    "electron": "concurrently --kill-others \"svelte-kit dev\" \"electron src/electron.cjs\"",
     "build": "svelte-kit build",
     "dev:package": "npm run build && electron-builder --config electron-builder.config.json --dir",
     "package": "npm run build && electron-builder --config electron-builder.config.json"
