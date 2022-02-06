@@ -9,7 +9,6 @@ export default {
 
     //adapter: node()
     adapter: adapter(),
-    target: "#svelte",
 
     vite: {
       compilerOptions: { dev },
