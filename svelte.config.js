@@ -10,6 +10,10 @@ export default {
     //adapter: node()
     adapter: adapter(),
 
+    prerender: {
+        default: true
+    },
+
     vite: {
       compilerOptions: { dev },
     }
