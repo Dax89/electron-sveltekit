@@ -5,11 +5,13 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script>
-      const ipc = require("electron").ipcRenderer;
+        const ipc = require("electron").ipcRenderer;
     </script>
     %sveltekit.head%
   </head>
   <body>
-    <div id="svelte">%sveltekit.body%</div>
+    <div id="svelte">
+        %sveltekit.body%
+    </div>
   </body>
 </html>

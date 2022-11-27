@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Page 1</title>
+  <title>Page 2</title>
 </svelte:head>
 
 <h1 class="pagetitle">Page 2</h1>

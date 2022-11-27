@@ -9,39 +9,40 @@ const isdev = !app.isPackaged || (process.env.NODE_ENV == "development");
 let mainwindow;
 
 function loadVite(port) {
-  mainwindow.loadURL(`http://127.0.0.1:${port}`).catch((err) => {
-    setTimeout(() => { loadVite(port); }, 200);
-  });
+    mainwindow.loadURL(`http://localhost:${port}`).catch(() => {
+        setTimeout(() => { loadVite(port); }, 200);
+    });
 }
 
 function createMainWindow() {
-  let mws = ws({
-    defaultWidth: 1000,
-    defaultHeight: 800
-  });
+    let mws = ws({
+        defaultWidth: 1000,
+        defaultHeight: 800
+    });
 
-  mainwindow = new BrowserWindow({
-    x: mws.x,
-    y: mws.y,
-    width: mws.width,
-    height: mws.height,
+    mainwindow = new BrowserWindow({
+        x: mws.x,
+        y: mws.y,
+        width: mws.width,
+        height: mws.height,
 
-    webPreferences: {
-      nodeIntegration: true,
-      contextIsolation: false,
-      devTools: isdev
-    }
-  });
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+            devTools: isdev || true
+        }
+    });
 
-  mainwindow.once("close", () => { mainwindow = null; });
+    mainwindow.once("close", () => { mainwindow = null; });
 
-  if(!isdev) mainwindow.removeMenu();
-  else mainwindow.webContents.openDevTools();
+    //if(!isdev) mainwindow.removeMenu();
+    //else mainwindow.webContents.openDevTools();
+    mainwindow.webContents.openDevTools({ mode: 'detach' })
+    //mainwindow.webContents.openDevTools();
+    mws.manage(mainwindow);
 
-  mws.manage(mainwindow);
-
-  if(isdev) loadVite(port);
-  else loadURL(mainwindow);
+    if(isdev) loadVite(port);
+    else loadURL(mainwindow);
 }
 
 app.once("ready", createMainWindow);
