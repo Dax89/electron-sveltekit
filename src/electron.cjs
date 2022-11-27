@@ -35,10 +35,8 @@ function createMainWindow() {
 
     mainwindow.once("close", () => { mainwindow = null; });
 
-    //if(!isdev) mainwindow.removeMenu();
-    //else mainwindow.webContents.openDevTools();
-    mainwindow.webContents.openDevTools({ mode: 'detach' })
-    //mainwindow.webContents.openDevTools();
+    if(!isdev) mainwindow.removeMenu();
+    else mainwindow.webContents.openDevTools();
     mws.manage(mainwindow);
 
     if(isdev) loadVite(port);
